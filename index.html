@@ -149,13 +149,7 @@
         <img src="images/hero_lifestyle.png" alt="Manoa handcrafted denim bag editorial" class="hero__image">
       </video>
     </div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content container">
-      <p class="hero__subtitle reveal">The Art of Denim</p>
-      <h1 class="hero__title reveal reveal-delay-1">Handcrafted<br>with Soul</h1>
-      <p class="hero__description reveal reveal-delay-2">Artisan bags reimagined from repurposed denim</p>
-      <a href="#products" class="btn btn-primary hero__cta reveal reveal-delay-3">Shop the Collection</a>
-    </div>
+    <div class="hero__overlay hero__overlay--minimal"></div>
   </section>
 
   <!-- ============================================
@@ -169,12 +163,30 @@
       </div>
 
       <div class="product-grid">
-        <!-- Product 1: Bow Tote -->
+        <!-- Product 1: Flora Hobo -->
         <div class="product-card reveal reveal-delay-1" id="product-1">
           <a href="#" class="product-card__link">
             <div class="product-card__image-wrapper">
+              <span class="product-card__badge badge-bestseller">Bestseller</span>
+              <img src="images/product_flora_hobo.png" alt="Manoa Flora Hobo — Light denim hobo bag with embroidered floral strap and plaid lining" class="product-card__image" loading="lazy">
+              <div class="product-card__quick-add">
+                <button class="btn btn-primary btn-sm">Quick Add</button>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <h3 class="product-card__name">Flora Hobo Bag</h3>
+              <p class="product-card__variant">Light Wash / Embroidered Strap</p>
+              <p class="product-card__price">₹4,500</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Product 2: Aria Bow Tote -->
+        <div class="product-card reveal reveal-delay-2" id="product-2">
+          <a href="#" class="product-card__link">
+            <div class="product-card__image-wrapper">
               <span class="product-card__badge">New</span>
-              <img src="images/bag_bow_studio.png" alt="Manoa Bow Tote — White canvas tote with denim bow and lace" class="product-card__image" loading="lazy">
+              <img src="images/product_aria_bow_tote.png" alt="Manoa Aria Bow Tote — Ivory canvas tote with denim bow and lace trim" class="product-card__image" loading="lazy">
               <div class="product-card__quick-add">
                 <button class="btn btn-primary btn-sm">Quick Add</button>
               </div>
@@ -187,55 +199,37 @@
           </a>
         </div>
 
-        <!-- Product 2: Denim Hobo -->
-        <div class="product-card reveal reveal-delay-2" id="product-2">
-          <a href="#" class="product-card__link">
-            <div class="product-card__image-wrapper">
-              <span class="product-card__badge badge-bestseller">Bestseller</span>
-              <img src="images/bag_denim_hobo_studio.png" alt="Manoa Flora Hobo — Denim hobo bag with embroidered floral strap" class="product-card__image" loading="lazy">
-              <div class="product-card__quick-add">
-                <button class="btn btn-primary btn-sm">Quick Add</button>
-              </div>
-            </div>
-            <div class="product-card__info">
-              <h3 class="product-card__name">Flora Hobo Bag</h3>
-              <p class="product-card__variant">Indigo / Embroidered</p>
-              <p class="product-card__price">₹4,500</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Product 3: Bucket Bag -->
+        <!-- Product 3: Luna Hobo -->
         <div class="product-card reveal reveal-delay-3" id="product-3">
           <a href="#" class="product-card__link">
             <div class="product-card__image-wrapper">
-              <img src="images/bag_bucket_studio.png" alt="Manoa Luna Bucket Bag — Dark denim drawstring bucket bag" class="product-card__image" loading="lazy">
+              <img src="images/product_luna_hobo.png" alt="Manoa Luna Hobo — Dark indigo denim hobo bag with bow tie and plaid lining" class="product-card__image" loading="lazy">
               <div class="product-card__quick-add">
                 <button class="btn btn-primary btn-sm">Quick Add</button>
               </div>
             </div>
             <div class="product-card__info">
-              <h3 class="product-card__name">Luna Bucket Bag</h3>
+              <h3 class="product-card__name">Luna Hobo Bag</h3>
               <p class="product-card__variant">Dark Indigo / Plaid Lined</p>
               <p class="product-card__price">₹3,800</p>
             </div>
           </a>
         </div>
 
-        <!-- Product 4: Cosmetic Case -->
+        <!-- Product 4: Luna Hobo (Bottom View) -->
         <div class="product-card reveal reveal-delay-4" id="product-4">
           <a href="#" class="product-card__link">
             <div class="product-card__image-wrapper">
               <span class="product-card__badge">New</span>
-              <img src="images/bag_cosmetic_studio.png" alt="Manoa Nova Cosmetic Case — Denim travel pouch" class="product-card__image" loading="lazy">
+              <img src="images/product_luna_hobo_bottom.png" alt="Manoa Luna Hobo — Bottom view showing denim craftsmanship" class="product-card__image" loading="lazy">
               <div class="product-card__quick-add">
                 <button class="btn btn-primary btn-sm">Quick Add</button>
               </div>
             </div>
             <div class="product-card__info">
-              <h3 class="product-card__name">Nova Cosmetic Case</h3>
-              <p class="product-card__variant">Dark Denim</p>
-              <p class="product-card__price">₹1,800</p>
+              <h3 class="product-card__name">Luna Hobo Bag</h3>
+              <p class="product-card__variant">Dark Indigo / Detail View</p>
+              <p class="product-card__price">₹3,800</p>
             </div>
           </a>
         </div>
@@ -251,8 +245,17 @@
        SPLIT CONTENT BLOCK
   ============================================= -->
   <section class="split-content" id="split-content">
-    <div class="split-content__image reveal">
-      <img src="images/collection_lifestyle.png" alt="Manoa collection of handcrafted denim bags arranged artfully" loading="lazy">
+    <div class="split-content__image split-content__video-wrap reveal">
+      <video
+        class="split-content__video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+      >
+        <source src="images/product_video_1.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="split-content__text reveal">
       <p class="split-content__label">The Manoa Difference</p>
@@ -279,7 +282,7 @@
 
       <div class="collections-grid">
         <div class="collection-card reveal reveal-delay-1" id="collection-totes">
-          <img src="images/bag_bow_studio.png" alt="Manoa Totes Collection" class="collection-card__image" loading="lazy">
+          <img src="images/product_aria_bow_tote.png" alt="Manoa Totes Collection" class="collection-card__image" loading="lazy">
           <div class="collection-card__overlay"></div>
           <div class="collection-card__content">
             <h3 class="collection-card__title">Totes</h3>
@@ -287,8 +290,10 @@
           </div>
         </div>
 
-        <div class="collection-card reveal reveal-delay-2" id="collection-hobo">
-          <img src="images/bag_denim_hobo_studio.png" alt="Manoa Hobo Bags Collection" class="collection-card__image" loading="lazy">
+        <div class="collection-card collection-card--video reveal reveal-delay-2" id="collection-hobo">
+          <video class="collection-card__video" autoplay loop muted playsinline preload="auto">
+            <source src="images/product_video_2.mp4" type="video/mp4">
+          </video>
           <div class="collection-card__overlay"></div>
           <div class="collection-card__content">
             <h3 class="collection-card__title">Hobo Bags</h3>
@@ -297,7 +302,7 @@
         </div>
 
         <div class="collection-card reveal reveal-delay-3" id="collection-accessories">
-          <img src="images/bag_cosmetic_studio.png" alt="Manoa Accessories Collection" class="collection-card__image" loading="lazy">
+          <img src="images/product_flora_hobo.png" alt="Manoa Accessories Collection" class="collection-card__image" loading="lazy">
           <div class="collection-card__overlay"></div>
           <div class="collection-card__content">
             <h3 class="collection-card__title">Accessories</h3>
@@ -411,22 +416,22 @@
     </div>
     <div class="instagram-grid">
       <div class="instagram-item">
-        <img src="images/bag_bow_studio.png" alt="Manoa on Instagram" loading="lazy">
+        <img src="images/product_flora_hobo.png" alt="Manoa on Instagram" loading="lazy">
       </div>
       <div class="instagram-item">
-        <img src="images/hero_lifestyle.png" alt="Manoa on Instagram" loading="lazy">
+        <img src="images/product_aria_bow_tote.png" alt="Manoa on Instagram" loading="lazy">
       </div>
       <div class="instagram-item">
-        <img src="images/bag_denim_hobo_studio.png" alt="Manoa on Instagram" loading="lazy">
+        <img src="images/product_luna_hobo.png" alt="Manoa on Instagram" loading="lazy">
       </div>
       <div class="instagram-item">
+        <img src="images/product_luna_editorial.png" alt="Manoa on Instagram" loading="lazy">
+      </div>
+      <div class="instagram-item instagram-item--hide-mobile">
+        <img src="images/product_luna_hobo_bottom.png" alt="Manoa on Instagram" loading="lazy">
+      </div>
+      <div class="instagram-item instagram-item--hide-mobile">
         <img src="images/about_artisan.png" alt="Manoa on Instagram" loading="lazy">
-      </div>
-      <div class="instagram-item instagram-item--hide-mobile">
-        <img src="images/bag_bucket_studio.png" alt="Manoa on Instagram" loading="lazy">
-      </div>
-      <div class="instagram-item instagram-item--hide-mobile">
-        <img src="images/collection_lifestyle.png" alt="Manoa on Instagram" loading="lazy">
       </div>
     </div>
   </section>
