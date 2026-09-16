@@ -474,6 +474,26 @@ ul, ol {
   overflow: hidden;
 }
 
+.hero__video-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  /* Smooth video rendering */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 .hero__image-wrapper {
   position: absolute;
   inset: 0;

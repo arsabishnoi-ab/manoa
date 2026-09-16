@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const $$ = (sel) => document.querySelectorAll(sel);
 
   const header = $('#header');
-  const heroImage = $('#hero-image');
+  const heroVideo = $('#hero-video');
   const backToTopBtn = $('#back-to-top');
   const menuToggle = $('#menu-toggle');
   const mobileMenu = $('#mobile-menu');
@@ -51,11 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Header transparency toggle
       if (header) {
         header.classList.toggle('scrolled', scrollY > 80);
-      }
-
-      // Hero parallax (subtle)
-      if (heroImage && scrollY < window.innerHeight) {
-        heroImage.style.transform = `scale(${1 + scrollY * 0.0001}) translateY(${scrollY * 0.2}px)`;
       }
 
       // Back to top visibility
@@ -273,5 +268,27 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('load', () => img.classList.add('loaded'));
     }
   });
+  // =========================================================================
+  // 12. Hero Video — Ensure smooth autoplay
+  // =========================================================================
+  if (heroVideo) {
+    // Ensure video plays (some browsers block autoplay)
+    const playVideo = () => {
+      heroVideo.play().catch(() => {
+        // If autoplay fails, try again after user interaction
+        document.addEventListener('click', () => heroVideo.play(), { once: true });
+        document.addEventListener('scroll', () => heroVideo.play(), { once: true });
+      });
+    };
+
+    if (heroVideo.readyState >= 3) {
+      playVideo();
+    } else {
+      heroVideo.addEventListener('canplay', playVideo, { once: true });
+    }
+
+    // Smooth playback rate
+    heroVideo.playbackRate = 1.0;
+  }
 
 });

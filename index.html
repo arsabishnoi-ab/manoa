@@ -133,8 +133,21 @@
        HERO SECTION
   ============================================= -->
   <section class="hero" id="hero">
-    <div class="hero__image-wrapper">
-      <img src="images/hero_lifestyle.png" alt="Manoa handcrafted denim bag editorial" class="hero__image" id="hero-image">
+    <div class="hero__video-wrapper">
+      <video
+        class="hero__video"
+        id="hero-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        poster="images/hero_lifestyle.png"
+      >
+        <source src="images/hero_video.mp4" type="video/mp4">
+        <!-- Fallback image if video doesn't load -->
+        <img src="images/hero_lifestyle.png" alt="Manoa handcrafted denim bag editorial" class="hero__image">
+      </video>
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__content container">
